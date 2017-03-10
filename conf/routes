@@ -7,11 +7,15 @@ GET     /                           controllers.Application.index
 # An example controller showing how to use dependency injection
 GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
-GET     /message                    controllers.AsyncController.message
+#GET     /message                    controllers.AsyncController.message
 
 
 
-GET   /ajax-call          controllers.Application.ajaxCall
+GET   /ajax-call                       controllers.Application.ajaxCall
+
+GET    /signup                      controllers.Application.signUp
+
+GET    /signin                      controllers.Application.signIn
 
 #Javascript Routes
 GET     /javascriptRoutes      controllers.JavascriptRoute.javascriptRoutes

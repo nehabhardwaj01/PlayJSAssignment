@@ -11,7 +11,8 @@ class Application extends Controller {
     * @return
     */
   def index = Action { implicit request =>
-    Ok(views.html.index("Welcome to our Website")(request))
+//    Ok(views.html.index("Welcome to our Website")(request))
+    Ok(views.html.welcome())
   }
 
   /**
@@ -21,6 +22,14 @@ class Application extends Controller {
     */
   def ajaxCall = Action { implicit request =>
     Ok(views.html.signIn())
+  }
+
+  def signIn = Action { implicit request =>
+    Ok(views.html.signIn())
+  }
+
+  def signUp = Action { implicit request =>
+    Ok(views.html.signUp())
   }
 
 }

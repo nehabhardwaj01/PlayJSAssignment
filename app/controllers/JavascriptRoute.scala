@@ -1,25 +1,15 @@
 package controllers
 
-import play.api.mvc.Action
-import play.api.mvc.Controller
-import play.api.mvc.EssentialAction
-import play.core.Router.JavascriptReverseRoute
-import play.core.Router._
-import routes.javascript.Application.index
-import routes.javascript.Application.ajaxCall
-import views.html.index
 import play.api.mvc._
-import play.api.routing._
-import _root_.play.sbt.PlayImport._
-
+import play.api.routing.JavaScriptReverseRouter
 
 
 class JavascriptRoute extends Controller {
 
   /* Application related JavascriptReverse Routes will go here */
-  val appRoutes: List[JavascriptReverseRoute] = List(index, ajaxCall)
+  //val appRoutes: List[JavascriptReverseRoute] = List(index, ajaxCall)
 
-  val javascriptRouters = appRoutes
+  //val javascriptRouters = appRoutes
 
   /**
     * This is use to generate JavascriptReverseRoute for all provided actions
@@ -29,8 +19,10 @@ class JavascriptRoute extends Controller {
   def javascriptRoutes = Action { implicit request =>
     Ok(
       JavaScriptReverseRouter("jsRoutes")(
-        routes.javascript.Users.list,
-        routes.javascript.Users.get
+        routes.javascript.CountController.count,
+        routes.javascript.Application.index,
+        routes.javascript.Application.signUp,
+        routes.javascript.Application.signIn
       )
     ).as("text/javascript")
   }
