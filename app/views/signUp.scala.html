@@ -1,0 +1,54 @@
+<!--@(message : String)-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Sign Up</title>
+    <script type='text/javascript'
+            src='@routes.Assets.versioned("bootstrap-3.3.7-dist/js/bootstrap.js")'></script>
+    <link rel="stylesheet"
+          href='@routes.Assets.versioned("bootstrap-3.3.7-dist/css/bootstrap.min.css")'>
+    <script type="text/javascript" src='@routes.Assets.versioned("bootstrap-3.3.7-dist/js/jQuery-3.1.1.min.js")'></script>
+
+    <link href='@routes.Assets.versioned("stylesheets/signUp.css")'>
+</head>
+
+<body>
+<div style="    margin-left: 20%; width: 60%;">
+    <h2>Sign Up Here !!!</h2>
+    <h4>message</h4>
+    <form class="form form-horizontal" action="#" method="post" method="post" autocomplete="on">
+
+        <label name="firstname">First Name</label>
+        <input class="form-control" type="text" name="name.firstName" placeholder="firstName" required ><br>
+
+        <label name="middlename">Middle Name</label>
+        <input class="form-control" type="text" name="name.middleName" placeholder="middleName" ><br>
+        <label name="lastname">Last Name</label>
+        <input class="form-control" type="text" name="name.lastName" placeholder="lastName" required><br>
+
+        <label name="gender">Gender</label><br>
+        <input type="radio" name="gender" value="male" checked >Male
+        <input type="radio" name="gender" value="Female">Female<br>
+
+        <label class="form-label" name="username">UserName</label>
+        <input class="form-control" type="text" name="username" placeholder="username" required ><br>
+
+        <label class="form-label" name="password">Password</label>
+        <input class="form-control" type="password" name="password" placeholder="password" required ><br>
+
+        <label class="form-label" name="repassword">Re-enter Password</label>
+        <input class="form-control" type="password" name="rePassword" placeholder="rePassword" required ><br>
+        <label class="form-label" name="hobbies">Hobbies</label>
+
+        <textarea class="form-control" type="text" name="hobbies" placeholder="hobbies" ></textarea><br>
+
+        <input type="hidden" name="isAdmin"><br>
+        <input type="hidden" name="isEnabled"><br>
+
+        <input class="form-control btn btn-success" type="submit" value=" Submit ">
+    </form>
+</div>
+</body>
+</html>
