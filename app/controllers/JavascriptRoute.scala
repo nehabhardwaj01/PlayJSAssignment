@@ -22,8 +22,9 @@ class JavascriptRoute extends Controller {
         routes.javascript.CountController.count,
         routes.javascript.Application.index,
         routes.javascript.Application.signUp,
-        routes.javascript.Application.signIn
-      )
+        routes.javascript.Application.signIn ,
+        routes.javascript.SignUpController.addUser
+    )
     ).as("text/javascript")
   }
 }

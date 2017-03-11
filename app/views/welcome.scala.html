@@ -3,58 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <title>Welcome to our Website</title>
+
     <script type='text/javascript' src='@routes.Assets.versioned("bootstrap-3.3.7-dist/js/bootstrap.js")'></script>
-    <script type='text/javascript' src='@routes.Assets.versioned("javascripts/welcome.js")'></script>
     <link rel="stylesheet" href='@routes.Assets.versioned("bootstrap-3.3.7-dist/css/bootstrap.min.css")'>
     <script type="text/javascript" src='@routes.Assets.versioned("bootstrap-3.3.7-dist/js/jQuery-3.1.1.min.js")'></script>
     <script type="text/javascript" src="@routes.JavascriptRoute.javascriptRoutes"></script>
-
-    <!--<script>-->
-        <!--$(document).ready(function(){-->
-
-
-         <!--$('#signUp').on("click",function(){-->
-         <!--jsRoutes.controllers.Application.signUp().ajax({-->
-                      <!--success: function(data){-->
-                        <!--$('#body').html(data);-->
-                      <!--},-->
-                      <!--error: function(){-->
-                      <!--$('#body').html("hello");-->
-                      <!--alert("fail")-->
-                    <!--}-->
-
-          <!--})-->
-
-
-
-      <!--})-->
-
-      <!--$('#signIn').on("click",function(){-->
-                <!--jsRoutes.controllers.Application.signIn().ajax({-->
-                            <!--success: function(data){-->
-                              <!--$('#body').html(data);-->
-                            <!--},-->
-                            <!--error: function(){-->
-                            <!--$('#body').html("hello");-->
-                            <!--alert("fail")-->
-                          <!--}-->
-
-                <!--})-->
-
-
-            <!--})-->
-
-
-
-<!--});-->
-    <!--</script>-->
+    <script type='text/javascript' src='@routes.Assets.versioned("javascripts/welcome.js")'></script>
 
 </head>
 <body>
 <div><h1>Welcome to our Website</h1>
 </div>
 
-<div>
+
+<div id="body">
 <table>
     <tr>
         <td>
@@ -66,10 +28,6 @@
     </tr>
 
 </table>
-</div>
-
-<div id="body">
-
 </div>
 
 </body>

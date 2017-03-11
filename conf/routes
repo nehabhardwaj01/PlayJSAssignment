@@ -9,7 +9,7 @@ GET     /count                      controllers.CountController.count
 # An example controller showing how to write asynchronous code
 #GET     /message                    controllers.AsyncController.message
 
-
+GET     /javascriptRoutes      controllers.JavascriptRoute.javascriptRoutes
 
 GET   /ajax-call                       controllers.Application.ajaxCall
 
@@ -17,8 +17,11 @@ GET    /signup                          controllers.Application.signUp
 
 GET    /signin                          controllers.Application.signIn
 
+POST   /profilePage/*lname           controllers.SignUpController.addUser(fname,lname,gender,uname,password,repassword,hobbies)
+
+#GET     /signin/:uname                  controllers.SignInController.signInForm(uname)
+
 #Javascript Routes
-GET     /javascriptRoutes      controllers.JavascriptRoute.javascriptRoutes
 
 # Map static resources from the /public folder to the /assets URL path
 #GET     /assets/js/routes           controllers.Application.jsRoutes()

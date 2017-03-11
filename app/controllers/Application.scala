@@ -1,9 +1,12 @@
 package controllers
 
+import com.google.inject.{Singleton, Inject}
+import models.SignUpData
 import play.api._
 import play.api.mvc._
 
-class Application extends Controller {
+@Singleton
+class Application @Inject()(cache: services.AppCacheProvider) extends Controller {
 
   /**
     * This action is used to serve Home page of the application
@@ -29,7 +32,11 @@ class Application extends Controller {
   }
 
   def signUp = Action { implicit request =>
-    Ok(views.html.signUp())
+    Ok(views.html.signUp(cache.getDefaultData)(""))
+  }
+
+  def profilePage = Action{ implicit request =>
+    Ok(views.html.profile(cache.getDefaultData))
   }
 
 }
