@@ -13,9 +13,9 @@ GET     /count                      controllers.CountController.count
 
 GET   /ajax-call                       controllers.Application.ajaxCall
 
-GET    /signup                      controllers.Application.signUp
+GET    /signup                          controllers.Application.signUp
 
-GET    /signin                      controllers.Application.signIn
+GET    /signin                          controllers.Application.signIn
 
 #Javascript Routes
 GET     /javascriptRoutes      controllers.JavascriptRoute.javascriptRoutes
